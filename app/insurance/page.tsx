@@ -200,11 +200,13 @@ function Page() {
                 className="flex h-24 items-center justify-center rounded-2xl border border-border/60 bg-card px-5 py-4 text-center text-sm font-medium text-foreground transition-colors hover:bg-muted/50 sm:h-28"
               >
                 {c.src ? (
-                  <img
+                  <GeoImage
                     src={c.src}
                     alt={`${c.name} logo`}
-                    className={`w-auto max-w-[88%] object-contain opacity-70 grayscale transition-all duration-300 hover:opacity-100 hover:grayscale-0 ${c.imgClass}`}
-                    loading="lazy"
+                    width={180}
+                    height={56}
+                    unoptimized={c.src.endsWith(".svg")}
+                    className={`h-auto w-auto max-w-[88%] object-contain opacity-70 grayscale transition-all duration-300 hover:opacity-100 hover:grayscale-0 ${c.imgClass}`}
                   />
                 ) : (
                   c.name
