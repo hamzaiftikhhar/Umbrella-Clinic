@@ -5,14 +5,21 @@ import reactHooks from "eslint-plugin-react-hooks";
 import tseslint from "typescript-eslint";
 import nextPlugin from "@next/eslint-plugin-next";
 
+const nextCoreWebVitals = nextPlugin.flatConfig?.coreWebVitals ?? {
+  name: "next/core-web-vitals",
+  plugins: { "@next/next": nextPlugin },
+  rules: {
+    ...nextPlugin.configs.recommended.rules,
+    ...nextPlugin.configs["core-web-vitals"].rules,
+  },
+};
+
 export default tseslint.config(
-  { ignores: [".next", "node_modules", "dist", ".output", "scripts"] },
+  { ignores: [".next", "next-env.d.ts", "node_modules", "dist", ".output", "scripts"] },
+  js.configs.recommended,
+  ...tseslint.configs.recommended,
+  nextCoreWebVitals,
   {
-    extends: [
-      js.configs.recommended,
-      ...tseslint.configs.recommended,
-      nextPlugin.configs["core-web-vitals"],
-    ],
     files: ["**/*.{ts,tsx}"],
     languageOptions: {
       ecmaVersion: 2020,
