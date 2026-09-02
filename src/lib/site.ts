@@ -39,8 +39,7 @@ export const SITE_URL =
 export const SYNAPSE_APP_URL =
   process.env.NEXT_PUBLIC_SYNAPSE_APP_URL?.replace(/\/$/, "") ??
   "https://synapse-hamzaiftikhhar.vercel.app";
-export const SYNAPSE_CLINIC_SLUG =
-  process.env.NEXT_PUBLIC_SYNAPSE_CLINIC_SLUG ?? "umbrella-health";
+export const SYNAPSE_CLINIC_SLUG = process.env.NEXT_PUBLIC_SYNAPSE_CLINIC_SLUG ?? "umbrella-health";
 
 export function absoluteUrl(path: string): string {
   if (path.startsWith("http")) return path;

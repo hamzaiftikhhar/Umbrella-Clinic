@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
 import { BadgeCheck, ShieldCheck, Star } from "lucide-react";
-import { GeoImage, geoImgProps } from "./GeoImage";
+import { GeoImage } from "./GeoImage";
 import { Container } from "./Container";
 import { BookButton } from "./BookButton";
 
@@ -64,7 +64,6 @@ export function StatCallout({
   imageAlt: string;
   cta?: ReactNode;
 }) {
-  const isRemote = image.startsWith("http");
   const numeric = Number.parseInt(stat.replace(/\D/g, ""), 10) || 92;
 
   return (
@@ -104,23 +103,13 @@ export function StatCallout({
             </div>
 
             <div className="relative min-h-[280px] lg:min-h-full">
-              {isRemote ? (
-                <img
-                  src={image}
-                  alt={imageAlt}
-                  className="absolute inset-0 h-full w-full object-cover"
-                  loading="lazy"
-                  {...geoImgProps(imageAlt)}
-                />
-              ) : (
-                <GeoImage
-                  src={image}
-                  alt={imageAlt}
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                />
-              )}
+              <GeoImage
+                src={image}
+                alt={imageAlt}
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
               <div
                 className="absolute inset-0 bg-gradient-to-t from-[color:var(--navy-800)]/20 via-transparent to-transparent lg:bg-gradient-to-l lg:from-transparent lg:via-transparent lg:to-[color:var(--cream)]/30"
                 aria-hidden

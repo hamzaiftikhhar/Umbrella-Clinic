@@ -1,6 +1,7 @@
 import { ArrowRight } from "lucide-react";
 import { Link } from "@/components/AppLink";
 import { cn } from "@/lib/utils";
+import { GeoImage } from "./GeoImage";
 
 interface ServiceCardProps {
   title: string;
@@ -37,12 +38,13 @@ export function ServiceCard({ title, description, to, badge, image, className }:
           <ArrowRight className="h-4 w-4" />
         </span>
         {image && (
-          <img
+          <GeoImage
             src={image}
             alt=""
+            width={96}
+            height={64}
             className="ml-3 h-16 w-24 rounded-xl object-cover opacity-90"
-            loading="lazy"
-            aria-hidden="true"
+            aria-hidden
           />
         )}
       </div>

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
+import Image from "next/image";
 import { Star, CheckCircle2 } from "lucide-react";
 import { CLINIC_GOOGLE_MAPS_URL } from "@/lib/site";
 
@@ -64,10 +65,13 @@ export function TestimonialCard({ name, quote, time, rating = 5 }: TestimonialCa
           aria-label="View on Google Maps"
           className="transition-transform hover:scale-110"
         >
-          <img
+          <Image
             src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg"
             alt="Google"
+            width={20}
+            height={20}
             className="h-5 w-5"
+            unoptimized
           />
         </a>
       </div>

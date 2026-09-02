@@ -6,7 +6,7 @@ import { PremiumIcon } from "./primitives/IconBadge";
 import { Reveal } from "./primitives/Reveal";
 import { IMG } from "@/data/images";
 import { getImageAlt } from "@/data/image-seo";
-import { geoImgProps } from "./primitives/GeoImage";
+import { GeoImage } from "./primitives/GeoImage";
 import { ROUTES } from "@/data/site-architecture";
 import type { HealthIconName } from "@/components/icons/icon-keys";
 
@@ -66,12 +66,12 @@ export function PillarsGrid() {
                 className="group relative flex h-full flex-col overflow-hidden rounded-[28px] border border-border/60 bg-card transition-all hover:-translate-y-0.5 hover:shadow-[var(--shadow-card)]"
               >
                 <div className="relative aspect-[4/3] overflow-hidden">
-                  <img
+                  <GeoImage
                     src={p.image}
                     alt={getImageAlt(p.altKey)}
-                    className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
-                    loading="lazy"
-                    {...geoImgProps(getImageAlt(p.altKey))}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-[1.04]"
+                    sizes="(max-width: 768px) 100vw, 33vw"
                   />
                   <PremiumIcon
                     healthIcon={p.healthIcon}
