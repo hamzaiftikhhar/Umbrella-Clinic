@@ -7,7 +7,15 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+# Dependencies
 node_modules
+
+# Next.js
+.next
+out
+.vercel
+
+# Legacy Vite / TanStack Start output (do not treat as the deploy target)
 dist
 dist-ssr
 .output
@@ -19,6 +27,14 @@ dist-ssr
 # Wrangler / Cloudflare
 .wrangler/
 .dev.vars
+
+# Env
+.env
+.env*.local
+
+# TypeScript
+*.tsbuildinfo
+next-env.d.ts
 
 # Editor directories and files
 .vscode/*
