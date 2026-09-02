@@ -2,13 +2,12 @@
 
 import { useState } from "react";
 import { SYNAPSE_APP_URL, SYNAPSE_CLINIC_SLUG } from "@/lib/site";
-import { cn } from "@/lib/utils";
 
-const EMBED_SRC = `${SYNAPSE_APP_URL}/embed/${encodeURIComponent(SYNAPSE_CLINIC_SLUG)}`;
+const EMBED_SRC = `${SYNAPSE_APP_URL.replace(/\/$/, "")}/embed/${encodeURIComponent(SYNAPSE_CLINIC_SLUG)}`;
 
 /**
- * Floating Synapse assistant. Clinic sites never call the API directly —
- * the iframe talks to Synapse from the app origin.
+ * Option A floating chat. Clinic connection is the iframe URL slug only.
+ * Guest config + /widget/chat/guest run on the Synapse origin, not this site.
  */
 export function SynapseChatWidget() {
   const [open, setOpen] = useState(false);
@@ -16,30 +15,58 @@ export function SynapseChatWidget() {
   return (
     <>
       <div
-        id="synapse-chat-panel"
+        id="synapse-panel"
         aria-hidden={!open}
-        className={cn(
-          "fixed bottom-[5.5rem] right-4 z-[999998] h-[min(640px,calc(100dvh-7rem))] w-[min(400px,calc(100vw-2rem))] overflow-hidden rounded-2xl border border-slate-900/10 bg-white shadow-[0_18px_50px_-18px_rgba(11,14,46,0.35)]",
-          open ? "block" : "hidden",
-        )}
+        style={{
+          display: open ? "block" : "none",
+          position: "fixed",
+          bottom: "5.5rem",
+          right: "1rem",
+          zIndex: 999998,
+          width: "min(400px, calc(100vw - 2rem))",
+          height: "min(640px, calc(100dvh - 7rem))",
+          borderRadius: 16,
+          overflow: "hidden",
+          boxShadow: "0 18px 50px -18px rgba(11,14,46,0.35)",
+          border: "1px solid rgba(15,23,42,0.08)",
+          background: "#fff",
+        }}
       >
         <iframe
           src={EMBED_SRC}
-          title="Clinic assistant chat"
+          title="Umbrella Health AI Assistant"
           allow="clipboard-write"
-          className="block size-full border-0"
+          style={{ width: "100%", height: "100%", border: 0, display: "block" }}
         />
       </div>
       <button
         type="button"
         id="synapse-chat-launcher"
-        aria-label={open ? "Close clinic chat" : "Open clinic chat"}
+        aria-label={open ? "Close chat" : "Open chat"}
         aria-expanded={open}
-        aria-controls="synapse-chat-panel"
+        aria-controls="synapse-panel"
         onClick={() => setOpen((next) => !next)}
-        className="fixed bottom-5 right-5 z-[999999] flex size-14 cursor-pointer items-center justify-center rounded-full border-0 bg-[#5b21b6] text-[1.35rem] leading-none text-white shadow-[0_10px_30px_-8px_rgba(91,33,182,0.55)]"
+        style={{
+          position: "fixed",
+          bottom: "1.25rem",
+          right: "1.25rem",
+          zIndex: 999999,
+          width: "3.5rem",
+          height: "3.5rem",
+          borderRadius: 9999,
+          border: "none",
+          cursor: "pointer",
+          background: "#5b21b6",
+          color: "#fff",
+          fontSize: "0.875rem",
+          fontWeight: 600,
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          boxShadow: "0 10px 30px -8px rgba(91,33,182,0.55)",
+        }}
       >
-        {open ? "✕" : "💬"}
+        {open ? "×" : "Chat"}
       </button>
     </>
   );
