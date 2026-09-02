@@ -86,7 +86,7 @@ export function SynapseChatWidget() {
         hidden={!open}
         className="pointer-events-auto relative flex flex-col overflow-hidden bg-white"
         style={{
-          width: "min(460px, calc(100vw - 1.5rem))",
+          width: "min(540px, calc(100vw - 1.5rem))",
           height: "min(720px, calc(100dvh - 5.5rem))",
           borderRadius: radius,
           border: "1px solid rgba(15,23,42,0.08)",
