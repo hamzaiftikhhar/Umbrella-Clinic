@@ -111,7 +111,10 @@ export function SynapseChatWidget() {
               alt=""
               className="size-8 shrink-0 rounded-full bg-white object-cover ring-2 ring-white/40"
             />
-            <p className="min-w-0 flex-1 truncate text-sm font-semibold" style={{ color: look.textColor }}>
+            <p
+              className="min-w-0 flex-1 truncate text-sm font-semibold"
+              style={{ color: look.textColor }}
+            >
               {look.clinicName} Assistant
             </p>
             <button
