@@ -168,7 +168,7 @@ function Page() {
 
       <section className="pb-20 sm:pb-28" aria-labelledby="ai-assistant-heading">
         <Container>
-          <div className="mx-auto max-w-[480px]">
+          <div className="mx-auto max-w-[540px]">
             <SectionHeading
               as="h2"
               id="ai-assistant-heading"
