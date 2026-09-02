@@ -35,6 +35,13 @@ export const CLINIC_MAP_EMBED_URL =
 export const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ?? "https://www.myumbrellahealth.com";
 
+/** Synapse clinic assistant — iframe loads `{APP_URL}/embed/{CLINIC_SLUG}`. */
+export const SYNAPSE_APP_URL =
+  process.env.NEXT_PUBLIC_SYNAPSE_APP_URL?.replace(/\/$/, "") ??
+  "https://synapse-hamzaiftikhhar.vercel.app";
+export const SYNAPSE_CLINIC_SLUG =
+  process.env.NEXT_PUBLIC_SYNAPSE_CLINIC_SLUG ?? "umbrella-health";
+
 export function absoluteUrl(path: string): string {
   if (path.startsWith("http")) return path;
   return `${SITE_URL}${path.startsWith("/") ? path : `/${path}`}`;
