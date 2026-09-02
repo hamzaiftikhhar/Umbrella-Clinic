@@ -10,6 +10,7 @@ import { ArticleCard } from "@/components/site/ArticleCard";
 import { pillars, articles } from "@/data/articles";
 import { IMG } from "@/data/images";
 import { ArrowRight } from "lucide-react";
+import { GeoImage } from "@/components/site/primitives/GeoImage";
 
 const seo = buildPageSeo({
   title: "Resources  Umbrella Health Learning Hub",
@@ -44,12 +45,13 @@ function Page() {
                   href={`/resources/${p.slug}` as "/resources/decoding-your-diagnostics"}
                   className="group block overflow-hidden rounded-3xl border border-border/60 bg-card transition-all hover:-translate-y-0.5 hover:shadow-[var(--shadow-card)]"
                 >
-                  <div className="aspect-[4/3] overflow-hidden">
-                    <img
+                  <div className="relative aspect-[4/3] overflow-hidden">
+                    <GeoImage
                       src={p.image}
                       alt=""
-                      className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
-                      loading="lazy"
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-[1.04]"
+                      sizes="(max-width: 768px) 100vw, 33vw"
                     />
                   </div>
                   <div className="p-6">
