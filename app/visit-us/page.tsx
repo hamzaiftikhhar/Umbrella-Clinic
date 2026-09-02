@@ -10,7 +10,13 @@ import { CTABanner } from "@/components/site/primitives/CTABanner";
 import { SeoImage } from "@/components/site/primitives/SeoImage";
 import { IMG } from "@/data/images";
 import type { LucideIconKey } from "@/components/icons/icon-keys";
-import { CLINIC_MAP_EMBED_URL, SITE_ADDRESS, SITE_PHONE, SYNAPSE_APP_URL, SYNAPSE_CLINIC_SLUG } from "@/lib/site";
+import {
+  CLINIC_MAP_EMBED_URL,
+  SITE_ADDRESS,
+  SITE_PHONE,
+  SYNAPSE_APP_URL,
+  SYNAPSE_CLINIC_SLUG,
+} from "@/lib/site";
 import { medicalClinicSchema } from "@/lib/schema";
 import { CLINIC_HOURS_DISPLAY } from "@/data/clinic-hours";
 
