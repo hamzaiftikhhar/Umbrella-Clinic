@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import Script from "next/script";
 import { SiteLayout } from "@/components/SiteLayout";
+import { SynapseChatWidget } from "@/components/SynapseChatWidget";
 import { JsonLd } from "@/components/JsonLd";
 import { SITE_NAME, absoluteUrl } from "@/lib/site";
 import { DEFAULT_OG_IMAGE, organizationSchema, webSiteSchema } from "@/lib/schema";
@@ -50,6 +51,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
         <JsonLd data={[organizationSchema(), webSiteSchema()]} />
         <SiteLayout>{children}</SiteLayout>
+        <SynapseChatWidget />
       </body>
     </html>
   );
