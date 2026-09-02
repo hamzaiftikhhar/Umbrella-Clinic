@@ -1,8 +1,12 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { X } from "lucide-react";
-import { SYNAPSE_APP_URL, SYNAPSE_CLINIC_SLUG } from "@/lib/site";
+import {
+  getSynapseEmbedSrc,
+  isSynapseMessageOrigin,
+  SYNAPSE_REQUIRED_EMBED_ORIGINS,
+} from "@/lib/synapse";
 import {
   type WidgetAppearance,
   readCachedWidgetAppearance,
@@ -11,7 +15,7 @@ import {
   normalizeWidgetAppearance,
 } from "@/lib/synapse-widget-appearance";
 
-const EMBED_SRC = `${SYNAPSE_APP_URL.replace(/\/$/, "")}/embed/${encodeURIComponent(SYNAPSE_CLINIC_SLUG)}`;
+const EMBED_SRC = getSynapseEmbedSrc();
 /** Height of Synapse's embedded header (title, more, close, privacy line). */
 const EMBED_HEADER_PX = 69;
 
@@ -26,10 +30,21 @@ function readInitialAppearance(): WidgetAppearance {
   return readCachedWidgetAppearance() ?? WIDGET_APPEARANCE_FALLBACK;
 }
 
+function isEmbedLoadBlocked(iframe: HTMLIFrameElement): boolean {
+  try {
+    const href = iframe.contentWindow?.location.href ?? "";
+    return !href || href === "about:blank" || /chromewebdata|chrome-error/.test(href);
+  } catch {
+    return false;
+  }
+}
+
 export function SynapseChatWidget() {
   const [open, setOpen] = useState(false);
   const [teaserIndex, setTeaserIndex] = useState(0);
   const [look, setLook] = useState<WidgetAppearance>(readInitialAppearance);
+  const [embedBlocked, setEmbedBlocked] = useState(false);
+  const iframeRef = useRef<HTMLIFrameElement>(null);
 
   useEffect(() => {
     let cancelled = false;
@@ -63,7 +78,7 @@ export function SynapseChatWidget() {
 
   useEffect(() => {
     const onMessage = (event: MessageEvent) => {
-      if (event.origin !== SYNAPSE_APP_URL) return;
+      if (!isSynapseMessageOrigin(event.origin)) return;
       const payload = event.data;
       const type = typeof payload === "string" ? payload : payload?.type || payload?.action;
       if (type === "close" || type === "synapse:close" || type === "widget-close") {
@@ -73,6 +88,25 @@ export function SynapseChatWidget() {
     window.addEventListener("message", onMessage);
     return () => window.removeEventListener("message", onMessage);
   }, []);
+
+  useEffect(() => {
+    if (!open) return;
+    setEmbedBlocked(false);
+    const iframe = iframeRef.current;
+    if (!iframe) return;
+
+    const checkBlocked = () => {
+      if (isEmbedLoadBlocked(iframe)) setEmbedBlocked(true);
+    };
+
+    iframe.addEventListener("load", checkBlocked);
+    const timeout = window.setTimeout(checkBlocked, 3500);
+
+    return () => {
+      iframe.removeEventListener("load", checkBlocked);
+      window.clearTimeout(timeout);
+    };
+  }, [open]);
 
   const teaser = TEASER_MESSAGES[teaserIndex];
   const radius = look.cornerRadius;
@@ -127,12 +161,28 @@ export function SynapseChatWidget() {
         </div>
         <div className="relative z-0 min-h-0 flex-1 overflow-hidden bg-white">
           <iframe
+            ref={iframeRef}
             src={EMBED_SRC}
             title={assistantTitle}
             allow="clipboard-write"
+            referrerPolicy="strict-origin-when-cross-origin"
             className="absolute inset-x-0 bottom-0 w-full border-0"
             style={{ top: -EMBED_HEADER_PX, height: `calc(100% + ${EMBED_HEADER_PX}px)` }}
           />
+          {embedBlocked ? (
+            <div className="absolute inset-0 z-10 flex flex-col items-center justify-center bg-white px-6 text-center">
+              <p className="text-sm font-semibold text-slate-900">Assistant couldn&apos;t load</p>
+              <p className="mt-2 max-w-sm text-xs leading-relaxed text-slate-600">
+                Synapse is blocking this site from embedding the chat. Add this site to Synapse
+                Widget → Allowed origins, and set{" "}
+                <code className="rounded bg-slate-100 px-1">NEXT_PUBLIC_API_BASE_URL</code> on the
+                Synapse Vercel project, then redeploy.
+              </p>
+              <p className="mt-3 text-[11px] text-slate-500">
+                Required origins: {SYNAPSE_REQUIRED_EMBED_ORIGINS.join(", ")}
+              </p>
+            </div>
+          ) : null}
         </div>
       </div>
 

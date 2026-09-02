@@ -10,13 +10,8 @@ import { CTABanner } from "@/components/site/primitives/CTABanner";
 import { SeoImage } from "@/components/site/primitives/SeoImage";
 import { IMG } from "@/data/images";
 import type { LucideIconKey } from "@/components/icons/icon-keys";
-import {
-  CLINIC_MAP_EMBED_URL,
-  SITE_ADDRESS,
-  SITE_PHONE,
-  SYNAPSE_APP_URL,
-  SYNAPSE_CLINIC_SLUG,
-} from "@/lib/site";
+import { CLINIC_MAP_EMBED_URL, SITE_ADDRESS, SITE_PHONE } from "@/lib/site";
+import { getSynapseEmbedSrc } from "@/lib/synapse";
 import { medicalClinicSchema } from "@/lib/schema";
 import { CLINIC_HOURS_DISPLAY } from "@/data/clinic-hours";
 
@@ -178,9 +173,10 @@ function Page() {
               description="Ask about doctors, insurance, hours, and booking. This is the same assistant as the Chat button."
             />
             <iframe
-              src={`${SYNAPSE_APP_URL}/embed/${encodeURIComponent(SYNAPSE_CLINIC_SLUG)}`}
+              src={getSynapseEmbedSrc()}
               title="Umbrella Health AI Assistant"
               allow="clipboard-write"
+              referrerPolicy="strict-origin-when-cross-origin"
               className="mt-8 h-[min(720px,85dvh)] min-h-[520px] w-full rounded-2xl border-0 shadow-[0_18px_50px_-18px_rgba(11,14,46,0.2)]"
             />
           </div>
