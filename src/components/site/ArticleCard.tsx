@@ -1,5 +1,6 @@
 import { Link } from "@/components/AppLink";
 import { pillars, articles } from "@/data/articles";
+import { GeoImage } from "./primitives/GeoImage";
 
 export function ArticleCard({ article }: { article: (typeof articles)[number] }) {
   const pillar = pillars[article.pillar];
@@ -10,12 +11,13 @@ export function ArticleCard({ article }: { article: (typeof articles)[number] })
       }
       className="group block h-full overflow-hidden rounded-3xl border border-border/60 bg-card transition-all hover:-translate-y-0.5 hover:shadow-[var(--shadow-card)]"
     >
-      <div className="aspect-[16/9] overflow-hidden">
-        <img
+      <div className="relative aspect-[16/9] overflow-hidden">
+        <GeoImage
           src={article.image}
           alt=""
-          className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
-          loading="lazy"
+          fill
+          className="object-cover transition-transform duration-500 group-hover:scale-[1.04]"
+          sizes="(max-width: 768px) 100vw, 33vw"
         />
       </div>
       <div className="p-6">
