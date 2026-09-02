@@ -1,59 +1,92 @@
-import { ArrowUpRight } from "lucide-react";
-import { Link } from "@tanstack/react-router";
+import { GeoImage } from "./primitives/GeoImage";
+import { ArrowUpRight, MapPin } from "lucide-react";
+import { Link } from "@/components/AppLink";
 import { Container } from "./primitives/Container";
-import { Reveal } from "./primitives/Reveal";
+import { IMG } from "@/data/images";
+import { CLINIC_GOOGLE_MAPS_URL, SITE_ADDRESS } from "@/lib/site";
 
 export function LocationBanner() {
   return (
-    <section aria-labelledby="location-heading" className="relative w-full overflow-hidden">
-      <Reveal>
-        {/* Wavy top edge using background color */}
-        <svg 
-          className="absolute inset-x-0 -top-1 z-20 w-full fill-background" 
-          viewBox="0 0 1440 100" 
-          preserveAspectRatio="none" 
-          style={{ height: "6vw", minHeight: "50px", maxHeight: "100px" }}
-          aria-hidden="true"
-        >
-          <path d="M0,0 L1440,0 L1440,20 C1000,120 400,100 0,10 Z" />
-        </svg>
-
-        <div className="relative w-full">
-          <img
-            src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=2400&q=80"
-            alt="Umbrella Health reception with sage green millwork and warm wood accents"
-            className="h-[500px] w-full object-cover sm:h-[600px]"
-            loading="lazy"
+    <section aria-labelledby="location-heading" className="relative w-full bg-background">
+      <div className="relative w-full overflow-hidden">
+        <div className="relative h-[424px] w-full sm:h-[494px] md:h-[541px] lg:h-[588px]">
+          <GeoImage
+            src={IMG.clinicInterior}
+            alt="Inside Umbrella Health clinic in New York City"
+            fill
+            className="object-cover object-[center_42%]"
+            sizes="100vw"
           />
-          
-          <div className="absolute inset-0 bg-gradient-to-r from-foreground/80 via-foreground/30 to-transparent" />
-          
-          {/* Content container so text aligns with the rest of the page */}
-          <div className="absolute inset-0 flex items-center">
-            <div className="mx-auto w-full max-w-7xl px-5 sm:px-8">
-              <div className="max-w-[420px] text-primary-foreground">
-                <p className="mb-4 text-xs font-bold uppercase tracking-[0.25em] text-primary-foreground/80">
-                  Now open
+          <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/30 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
+
+          {/* Asymmetric organic wave — high left, dips past center, rises right */}
+          <svg
+            className="pointer-events-none absolute inset-x-0 top-0 z-10 w-full fill-background"
+            viewBox="0 0 1440 160"
+            preserveAspectRatio="none"
+            style={{ height: "7.5vw", minHeight: "58px", maxHeight: "112px" }}
+            aria-hidden
+          >
+            <path d="M0,0 L1440,0 L1440,52 C1310,78 1120,138 760,128 C460,118 200,42 0,12 Z" />
+          </svg>
+
+          <div className="pointer-events-none absolute inset-0 z-20 flex items-center pb-0">
+            <Container className="pointer-events-auto pb-0">
+              <div className="max-w-2xl text-primary-foreground">
+                <p className="text-base font-medium tracking-tight text-primary-foreground/90 sm:text-lg">
+                  Visit Us
                 </p>
-                <h2 id="location-heading" className="text-4xl font-semibold leading-[1.1] tracking-tight sm:text-[3.5rem]">
-                  Visit us in{" "}
-                  <span className="font-display font-medium italic">New York City</span>
-                </h2>
-                <p className="mt-4 text-sm leading-relaxed text-primary-foreground/90 sm:text-base">
-                  200 Lafayette Street, NoHo — steps from Spring Street station.
-                </p>
-                <Link
-                  to="/visit-us"
-                  className="group mt-8 inline-flex items-center gap-2 rounded-full border border-background/20 bg-background/10 px-8 py-3.5 text-sm font-semibold text-primary-foreground backdrop-blur-md transition-all hover:bg-background hover:text-foreground hover:shadow-lg active:scale-95"
+
+                <h2
+                  id="location-heading"
+                  className="mt-3 max-w-lg text-balance font-display text-xl font-semibold leading-snug tracking-tight text-primary-foreground sm:text-2xl md:text-[1.75rem]"
                 >
-                  Our Clinics
-                  <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-                </Link>
+                  Modern Medicine In The Heart Of Lower Manhattan
+                </h2>
+
+                {/* Short version — mobile only */}
+                <p className="mt-4 max-w-xl text-sm leading-relaxed text-primary-foreground/90 sm:hidden">
+                  Located in Lower Manhattan, Umbrella Health offers trusted primary care,
+                  board-certified specialists, and comprehensive care for patients across New York
+                  City.
+                </p>
+                {/* Full version — sm and above */}
+                <p className="mt-4 hidden max-w-xl text-sm leading-relaxed text-primary-foreground/90 sm:block sm:text-base">
+                  Conveniently located in Lower Manhattan, near Union Square, Greenwich Village, and
+                  the Flatiron District, Umbrella Health provides easy access to trusted primary
+                  care doctors and board-certified specialists for patients across New York City.
+                  Experience comprehensive, patient-centered healthcare all under one roof.
+                </p>
+
+                <p className="mt-4 flex items-center gap-2 text-sm text-primary-foreground/90 sm:text-base">
+                  <MapPin className="h-4 w-4 shrink-0" aria-hidden />
+                  <span>{SITE_ADDRESS}</span>
+                </p>
+
+                <div className="mt-7 flex flex-wrap items-center gap-3">
+                  <Link
+                    to="/contact-us"
+                    className="group inline-flex items-center gap-2 rounded-full border border-primary-foreground/35 bg-primary-foreground/10 px-6 py-2.5 text-sm font-medium text-primary-foreground backdrop-blur-sm transition-all duration-300 hover:border-primary-foreground/55 hover:bg-primary-foreground/15"
+                  >
+                    Our Clinics
+                    <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                  </Link>
+                  <a
+                    href={CLINIC_GOOGLE_MAPS_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group inline-flex items-center gap-2 rounded-full border border-primary-foreground/25 bg-transparent px-6 py-2.5 text-sm font-medium text-primary-foreground transition-all duration-300 hover:border-primary-foreground/45 hover:bg-primary-foreground/10"
+                  >
+                    Get Directions
+                    <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                  </a>
+                </div>
               </div>
-            </div>
+            </Container>
           </div>
         </div>
-      </Reveal>
+      </div>
     </section>
   );
 }

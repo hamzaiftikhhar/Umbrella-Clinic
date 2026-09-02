@@ -24,7 +24,7 @@ export function HeroSplit({
   const isForest = tone === "forest";
   return (
     <section
-      className={`relative overflow-hidden pt-28 pb-24 sm:pt-36 sm:pb-32 ${
+      className={`relative overflow-hidden pt-24 pb-24 sm:pt-28 sm:pb-32 ${
         isForest ? "bg-primary text-primary-foreground" : "bg-[color:var(--mint)] text-foreground"
       }`}
     >
@@ -40,7 +40,7 @@ export function HeroSplit({
                 {eyebrow}
               </p>
             )}
-            <h1 className="text-balance font-sans text-4xl font-semibold leading-[1.05] tracking-tight sm:text-5xl md:text-[3.5rem]">
+            <h1 className="text-balance font-sans text-4xl font-bold leading-[1.05] tracking-tight sm:text-5xl md:text-[3.5rem]">
               {title}
             </h1>
             {description && (
@@ -73,10 +73,8 @@ export function HeroSplit({
         aria-hidden="true"
         className="absolute inset-x-0 bottom-[-1px] h-16 bg-background"
         style={{
-          WebkitMaskImage:
-            "radial-gradient(140% 100% at 50% 100%, black 70%, transparent 71%)",
-          maskImage:
-            "radial-gradient(140% 100% at 50% 100%, black 70%, transparent 71%)",
+          WebkitMaskImage: "radial-gradient(140% 100% at 50% 100%, black 70%, transparent 71%)",
+          maskImage: "radial-gradient(140% 100% at 50% 100%, black 70%, transparent 71%)",
         }}
       />
     </section>

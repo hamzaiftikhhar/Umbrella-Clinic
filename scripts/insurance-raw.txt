@@ -1,0 +1,848 @@
+Empire Blue Cross Blue Shield (Health)
+Anthem Blue Access EPO WH
+Empire Premium Care PPO
+Value EPO
+PPO
+DirectShare (SM) POS
+Anthem D HMO
+Connection GEPO
+Essential Plan
+Empire Platinum EPO
+Anthem Medicare Advantage (HMO_POS)
+Direct HMO
+Anthem EPO
+Davis Vision
+Empire HMO
+Anthem Blue Access EPO
+Empire PPO Plus
+City Of New York Anthem EPO
+Anthem Medicare Advantage (PPO)
+Anthem Medicare Advantage (HMO)
+Traditional
+Prism EPO
+Anthem Gatekeeper X S
+Anthem HMO (Individual Exchange HMO)
+Access HMO
+Anthem Medicare Preferred
+Anthem PPO
+Anthem D EPO
+Essential
+Blue View Vision
+Connection EPO
+Empire Silver PPO
+Anthem HealthPlus Full Dual Advantage
+Direct POS
+Building Service 32bj Health Fund Basic Plan
+Total Blue EPO HSA
+Blue Access EPO HSA
+Prism PPO
+Blue Access EPO
+Anthem Gatekeeper X St I
+Anthem HMO (Commercial HMO)
+EPO
+Blue Access GEPO
+Anthem Gatekeeper X St
+Empire POS
+Indemnity
+Blue Card PPO National
+Anthem Blue Cross Blue Shield
+Blue Choice (PPO)
+HEALTHSYNC POS HSA P
+Blue Options
+Anthem Clear Choice Blue (PPO)
+Blue Essential Open Access POS
+Nys Teamsters - Blue Preferred PPO Supreme
+Rightplan
+HDHP By IBM
+Smartsense Standard Rx
+Blue Preferred (POS)
+BC PPO
+Motion Picture Industry (PPO)
+Anthem Select HMO
+Central POS Blue Preferred Natl
+Power Select HMO Network Plus
+PPO Share
+Anthem Medicare Advantage 3 (HMO_POS)
+UHHS Tier PPO Custom
+Anthem Blue Cross POS
+Anthem Extra Help
+Blue Care Elect (PPO)
+Gatekeeper HMO
+HDHP Plus By IBM
+MyBlue Plus
+Google PPO COBRA
+CU High Active
+UC Core
+Blue Value X (HMO)
+PPO Standard Pathway HSA
+PPO W IHM And AIM
+Google (PPO)
+Anthem Alliance Options PPO
+Select (HMO)
+PPO By IBM
+Blue Cross HMO
+Blue Preferred PPO HSA Non Vmd
+Access Blue New England HMO HSA (OA)
+Traditional (Indemnity_PFFS)
+HealthKeepers Open Access POS
+BlueCare (PPO)
+Anthem Pathway X HMO
+Blue Choice PPO HSA
+Anthem HealthKeepers X (Individual Exchange HMO)
+Anthem Blue Value X (HMO)
+Blue View Vision Insight
+Anthem Blue Cross PPO
+CU Exclusive Active
+Access Blue New England HMO (OA)
+Classic PPO
+HMO Cedars Sinai Only
+Anthem PPO Plus
+Minimum Coverage (HMO)
+POS Empire Alt Net
+Select (PPO)
+Premier Plus
+Access HMO
+UCHealth HD HSA
+Anthem EPO (Individual Exchange EPO)
+Google PPO Interns
+CDHP By Capital One
+Blue Cross Premier PPO
+Cedars Sinai PPO Network
+Silver By Raytheon Technologies Corporation
+Anthem Pathway Guided Access HMO VI (Individual Exchange HMO)
+Core PPO
+Anthem Clear Choice Tiered W HSA Off
+Anthem D (EPO)
+Premier Select (HMO)
+Pathway HMO
+Kentucky Employees' Health Plan
+Building Service Fnd Metropolitan
+Premier (PPO)
+Anthem Silver
+Medicare Advantage (PPO)
+Blue Preferred PPO
+IBM (PPO)
+HEALTHSYNC Options POS Tier
+Anthem Blue Value X Ded
+BlueChoice New England HRA Blended POS GK
+BlueCare POS
+Blue View PPO By Capital One
+Anthem Blue Cross Vivity Classic HMO
+Managed Indemnity
+Blue Preferred Select PPO
+Blue Preferred Plus PPO
+Anthem HealthKeepers X (Commercial HMO)
+Anthem Gatekeeper X Chil
+HMO
+Value Priority Select HMO
+Pathway Standard (EPO)
+Standard (HMO)
+UK HMO
+Medicare Advantage (HMO-POS)
+Keycare (PPO)
+Blue View Vision (PPO)
+Blue Preferred PPO Non Vmd
+Small Group (PPO)
+Anthem Blue Access PPO (Commercial PPO)
+Secure Preferred
+BlueChoice PPO
+Blue Choice Commercial (PPO)
+State BlueCare POS
+Classic Priority Select HMO
+POS AltNet Blue Priority
+Direct Access
+Google GHIP
+New York - Hospital Program
+Total Blue HSA
+Sag Aftra (Plan I Mhsa)
+EP Standard (HMO)
+Anthem Minimum Coverage HMO
+Anthem HRA
+Anthem Mountain Enhanced Select
+Blue Preferred (HMO)
+Blue Priority POS
+Anthem EPO Virtual PCP Select Dr
+Ohio - Soca Benefit Plan PPO
+Blue HPN (HMO)
+Gatekeeper X (HMO)
+BC HMO
+Premier Priority Select HMO
+Balanced (PPO)
+Standard Pathway (PPO)
+Blue Access (PPO)
+BlueChoice (HMO)
+Blue Preferred Plus (POS)
+Blue Preferred POS
+Plus PPO By Verizon
+Blue Priority HMO
+Anthem Minimum Coverage EPO
+Centers Plan For Medicaid Advantage Plus
+Blue Choice Select PPO
+DPOS PCP
+UK PPO
+Anthem PPO W HSA
+Altnet BlueChoice (POS)
+PPO By TD Synnex
+HMO BlueCare Newhaven Ephc Open Access
+BlueChoice New England (POS)
+Anthem Blue Preferred POS W
+Minimum Coverage (EPO)
+Boyd Gaming Network
+Classic Prudent Buyer Incentive PPO
+Blue Cross Select (HMO)
+Blue Card National (PPO)
+Blue Open Access (POS)
+Preferred Blue PPO
+Preferred Care
+Essential (HMO)
+POS Blue Priority
+Blue Priority PPO
+Anthem Blue Preferred HMO
+SHBP HRA
+Anthem Gatekeeper St Inn Individual N
+Capital One (PPO)
+Medicare Preferred (PPO)
+Thru FPL STD HX
+Anthem Gatekeeper X St I
+Blue Secure PPO
+Pathway (HMO)
+Calpers Select HMO
+Enhanced PPO By Capital One
+Empire AltNet (Alternative Network) POS
+Anthem Minimum Coverage D HMO (Commercial HMO)
+Pathway X Enhanced Standard (HMO)
+CDHP Nat Genc Acct (HSA)
+Lumenos PPO
+Gnric Anthem PPO Elements Choice HSA
+Blue View PPO By IBM
+Anthem X Preferred
+Comprehensive PPO By Bank Of America
+Anthem Blue Access Choice PPO
+Consumer HDHP By Bank Of America
+Motion Picture Industry Retiree
+Blue Priority (POS)
+Access Blue New England Open Access (HMO)
+EPO PPO Altnet Blue Access
+Anthem Blue Preferred Plus POS HSA
+Pathway (PPO)
+Anthem Priority Select HMO
+Medicare Advantage (HMO)
+Raytheon Technologies Corporation (PPO)
+Blue View (PPO)
+PPO HRA
+Open Access Point Of Service
+HMO Select
+POS (HMO)
+Preferred Provider Option Plus
+Aetna
+Open Access Managed Plus (POS)
+Explorer (PPO)
+Medicare Premier 3
+Open Access Managed Choice
+Whole Health (HMO)
+Premier (HMO-POS)
+Open Access Network Only
+Medicare Value (HMO)
+Medicare Core Plan (PPO)
+BA PCP Plus Unlimited Minute
+Medicare Elite (PPO)
+Sunrise (HMO-POS)
+Medicare Explorer Premier (HMO_POS)
+Silver S HMO
+Managed Behavioral
+Medicare Eagle (PPO)
+Banner (HMO)
+Medicare Discover Value
+Choice POS II
+Medicare Option (HMO-POS)
+BA S PCP Plus Unlimited Minute
+Open Access II (POS)
+Open Access Managed Choice PPO
+Advantra Elite (HMO)
+Medicare Assure (HMO)
+Value Network HMO
+Medicare Value Plus (HMO_POS)
+Signature (HMO)
+(POS)
+Managed Choice POS
+Open Access
+Advanced PCP Plus Network Walk
+Open Access Elect Choice EPO
+Assure Premier Plus D-SNP (HMO)
+Elite (HMO-POS)
+Advanced PCP Plus Network Minu
+PPO Dental
+Medicare Prime Value (HMO_POS)
+AHF PPO
+Medicare Plan W/Rx (PPO)
+Open II (POS)
+Open Choice PPO
+Health Network
+Medicare Plan (PPO)
+Comprehensive
+Eagle Plus (PPO)
+Medicare Signature (HMO)
+OA Elect Choice EPO HDHP
+Advanced PCP Plus Network Min
+Medicare Preferred (PPO)
+Medicare Explorer (PPO)
+Open Access Plus (EPO)
+Advanced PCP Plus Network (HMO)
+Whole Network Minuteclinic
+HSA Choice POS II
+Foreign Service Benefit Plan
+Medicare Advantra (PPO)
+Open Access Select (HMO)
+Banner HMO
+MAPD (PPO)
+Aexcel Plus Open Access Select
+Open Access HMO
+Preferred (PPO)
+Premier Care Network Plus Open Access Select
+Medicare (HMO POS)
+Medicare Premier (PPO)
+Medicare Sunrise (HMO POS)
+Medicare Advantra Value (HMO POS)
+Select
+Medicare Advantra Eagle (HMO POS)
+Choice Open Access Manage POS
+Medicare Plan W/Rx Flex
+Open Access Network Option
+Premier Care Network Open Access Select
+Medicare Assure QMB
+Signature Administrators
+Advantra (HMO-POS)
+Cornell University Choice POS II Weill PPO
+PPO International
+Medicare Advantra Preferred (PPO)
+PPO Student
+Medicare Connect Plus
+Medicare Advantra (HMO POS)
+Aexcel Choice POS II
+Innovation Advanced HMO
+Medicare Longevity (PPO)
+Advantra Credit Value (PPO)
+Advanced HSA Network Plus Minute Clinic
+POS
+Vision
+Open Access Select (EPO)
+Medicare Gold Advantage
+Medicare Prime (HMO_POS)
+Medicare Plan W/Rx (HMO)
+Assure Premier Plus HMO DSNP Medicare
+Open Access Elect Choice (HMO)
+Medicare Advantra Plus (PPO)
+OA Elect Choice EPO
+Premier Care Network Choice POS II
+Open Access EPO Plus
+Eagle (HMO-POS)
+Advantra Value (HMO-POS)
+Traditional Choice
+Medicare $75 Buy-Down Plan W/Rx
+Medicare Elite (HMO POS)
+Giveback Choice (PPO)
+Advanced Whole Network Plus
+Vision Preferred
+Medicare Extra Value
+Select PPO
+Medicare Value Select
+Medicare Advantage (HMO)
+Medicare Advantra Select (HMO-POS)
+Premier Care Network Plus
+Medicare Premier (HMO_POS)
+Advantra Preferred (PPO)
+Value Plus Signature (PPO)
+Medicare Smartfit (HMO POS)
+EPO
+OAHMO Banner
+Open Network Only Plus (EPO)
+Medicare Advantra Credit Value (PPO)
+Plus (HMO-POS)
+Medicare Plan W/Rx Metals
+Advantra Select (HMO-POS)
+AHF Open Access Network Only
+Whole Network Plus Minutecl
+Open Access Managed Choice (POS)
+Aexcel Plus Choice POS II
+Banner PCP Plus Unlimited (HMO)
+Open EPO Plus
+Aexcel Open Access Select
+HCA HealthCare BH EWS WL Well Care Level Core PPO
+Eap PPO Commercial
+EPO Open Access Select
+Advanced Network Plus Walk Clinic
+Open Access Select EPO
+Medicare Smartfit (PPO)
+Open Access Elect Choice (EPO)
+Open POS II
+HealthFund Open Access Managed Choice POS
+Choice POS
+HMO Basic
+National Advantage Program
+Select (HMO)
+Medicare Eagle (HMO POS)
+Medicare Premier 2
+HMO
+Open Choice (PPO)
+OA Managed Choice POS
+Core (PPO)
+Bronze S HMO
+SmartFit (PPO)
+Advantra Eagle (HMO-POS)
+Medicare Select (HMO_POS)
+Medicare Plus (HMO POS)
+QPOS
+Premier Care Network Plus Choice POS II
+Medicare Select (HMO)
+UnitedHealthcare
+WHA HMO Ind OP Vis Day Plus IP
+SV Coal MDA
+WHA HMO LG OP Day After Deductible IP
+Choice (EPO)
+Orlando PPO
+Choice (Individual Exchange EPO)
+Sutterselect Tier PPO
+(PPO)
+Liberty Network (PPO)
+Network Copay By Pfizer
+MedicareComplete Focus (HMO)
+National PPO
+SignatureValue Harmony HMO
+Managed Indemnity
+BB All MBRS AccentCare
+UHC The Villages Medicare Advantage
+UMR Mount Sinai Health
+WHA HMO Ind OP
+Medicare Advantage Choice
+Indemnity_PFFS
+Doctors
+High PPO
+Neighborhood Health Partnership POS
+Value Plus (HMO)
+Core
+Heritage Plus
+Advantage Plus (HMO)
+Nursing Home Plan (PPO)
+Veba Direct HMO
+Harvard Pilgrim Choice Plus POS
+Group Medicare Advantage (HMO)
+Navigate Plus PPO
+Plus PPO By Apple
+Signature Value Advantage HMO
+MAHP Gated HMO Lockin
+Advantage (EPO)
+C Advantage Plus (EPO)
+Focus Individual Med (HMO)
+Choice Plus Passport Connect
+Nalc BH High Option HBP Active Core (PPO)
+Oxford Plan
+Charter
+Honor Health Standard Plan
+Western Health Advantage Large Group (HMO)
+Choice Plus PPO
+Traditional Coinsurance By Pfizer
+UHC X Virtual First
+Nexus ACO OA
+Heritage Select POS
+Compass Rose Health Plan
+UHC EPO
+Protectorguard Choice
+AARP Medicare Advantage From UHC (HMO_POS)
+Liberty Network Select EPO HSA
+Freedom (PPO)
+Navigate (HMO)
+Signature Value Alliance HMO
+C Advantage Plus (HMO)
+UHC C Advantage
+Western Health Advantage - WHA (HMO)
+Base CSR (HMO)
+Nexus ACO
+WYNN Resorts Limited PPO
+UHC D Virtual First
+MGB GIC HMO OP Per Admit Quarterly IP Py
+Nursing Home Plan (HMO_POS)
+Medica Mayo Select (PPO)
+Medicarecomplete Choice
+Standard (HMO)
+UHC HMO
+Copay Focus (HMO)
+MGB HMO Plus Tier OP After Deductible IP PY
+Medicare Advantage Essential Regional PPO
+Mass General Brigham Plus (HMO)
+BB All MBRS Accenture
+Select Plus (PPO)
+UHC D Value Plus
+Honor Health Coordinated Care Plan
+UHC Virtual First
+Honor Health HDHP
+UHC Kelsey Seybold Focus
+Mgm Resorts International PPO
+Focus Plus Individual Med Deductible
+Oscar NY Silver Simple PCP Saver Wel
+Advantage (HMO)
+WHA HMO Small Group OP IP
+Navigate EPO
+Medica Mayo Premier (PPO)
+UHC D Value
+Standard (EPO)
+Select Plus (POS)
+MDIPA OCI
+Value (Commercial HMO)
+SV Lacera
+Advantage+ (HMO)
+UHC C Standard
+UHC D Advantage
+Options PPO
+HDHP
+Vision
+Medicare Advantage (PPO)
+Value (EPO)
+RPPO UHC Complete Care Support (Regional PPO)
+Essential (HMO)
+Nalc BH High Option PPO HBP PSHB Active Core
+Choice Plus Network (PPO)
+UHC Top Tier
+AARP Medicare Advantage Essentials ValueRx
+Value (Individual Exchange HMO)
+AARP Medicare Advantage Essentials From UHC (HMO_POS)
+VantagePlus PPO FGK
+Base CSR (EPO)
+AARP SecureHorizons Medicare Advantage
+Nexusaco R
+WHA HMO Small Group OP Day After Deductible Plus
+All Savers Alternate Funding
+Liberty Network (EPO)
+Charter Plus
+Value (HMO)
+D Focus Individual Med Deductible
+Focus (HMO)
+MDIPA OCI Preferred
+All Members Nokia Enhanced (PPO)
+Direct Access Neighborhood Health Partnership HMO
+Charter Balanced
+UHC Value Plus Term
+Focus (EPO)
+UHC E Virtual First
+UnitedHealthOne
+WHA HMO LG OP IP
+Advantage Plus (EPO)
+Choice
+Copay Focus $0 Individual Med Deductible (EPO)
+WHA HMO Ind OP Vis Day Plus I
+Compass
+WHA HMO Ind OP IP
+Select
+Group Medicare Advantage (PPO)
+BB All MBRS Verizon Communications
+UHC Standard Individual Deductible
+Core Essential
+Harvard Pilgrim PPO
+AARP Medicare Advantage Choice Premier PPO
+Protectorguard Premier
+UHC C Value Plus
+Saver PPO By Apple
+All Members Nokia Standard (PPO)
+Sutterselect Standard EPO Plus
+United Student Health Insurance Resources PPO
+Mount Sinai Top Tier Choice
+Csveba Alliance HMO
+Freedom (EPO)
+Choice Plus (POS)
+Kelsey Seybold Focus (HMO)
+BB All MBRS Options Western Governors Universit
+AARP Medicare Advantage From UHC (PPO)
+Navigate Balanced
+Doctors Plus
+HCA BH EWS WL United Well Care Level (Support)
+Advantage HMO
+MGB Partners Out Of Area EPO OP Admit IP
+Medicare Advantage Patriot (PPO)
+POS
+UHC D Advantage Plus
+Multi-Choice
+Choice Plus
+Bon Secours Mercy EPO
+DHR
+UHC D Standard
+UHC C Value Plus Individual Deductible
+Metro Network
+United Behavioral
+Virtual First (HMO)
+SignatureValue HMO
+AARP Medicare Advantage Patriot (HMO_POS)
+Oxford USA
+Dual Complete (PPO)
+Heritage Select Advantage
+Harvard Pilgrim Choice EPO
+Navigate Plus
+WHA HMO LG OP Days Plus IP
+WHA HMO CSTM OP Admit IP
+HPN HMO
+Choice (Commercial EPO)
+NHP HMO
+AARP Medicare Advantage Value Care HMO POS
+Multiplan PHCS
+PHCS Healthy Directions or Extended PPO
+PHCS Preventative Service Only
+MultiPlan Preventative Services Only
+PHCS
+MultiPlan Specific Services
+Multiplan
+ValuePoint by MultiPlan
+MultiPlan Complementary
+PHCS Limited Benefit Plan
+PHCS Savility
+HealthEOS PPO
+HealthEOS Plus+
+PHCS Practioner Only
+Cigna
+HMO By Walt Disney
+POS Open Access
+Open Access Plus PPO By Nvidia
+Open Access Plus Network Carelink
+True Choice Plus Medicare
+Connect HSA
+Open Access (HMO)
+Open Access Plus
+PPO By AT&T
+NYU Comp
+The Care Network
+HSA Qualified HDHP
+Behavioral
+PPO By JPMorgan Chase
+Open Access Plus PPO By Walt Disney
+Connect Flex
+HMO By Dow
+Surefit
+Alliance Medicare
+Local Plus
+Open Access Plus Network (PPO)
+True Choice Savings Medicare
+Vision PPO By AT&T
+Open Access Plus Carelink (EPO)
+Connect Cms Standard (HMO)
+Open Access Plus PPO By Dow
+Network Open Access (POS)
+NYU Basic
+Open Access Plus PPO By Morgan Stanley
+True Choice Courage Medicare
+PPO By Dow
+Premier Medicare
+Kaiser Mid Atlantic State HMO
+Open Access
+Panther Advantage
+True Choice Core Medicare
+Dental Vision
+Connect Flex (EPO)
+Medical By Amazon
+Network Open Access
+Rush Core Rx
+CDHP By Progressive
+Open Access Plus PPO By AT&T
+Connect Individual Med (EPO)
+UnitedHealthcare Community Plan
+UnitedHealthcare Dual Complete (PPO)
+Essential
+UHC Community Plan Medicaid Managed Care
+UnitedHealthcare Dual Complete (HMO_POS)
+Johns Hopkins Employer Health Programs
+Employer Health Programs (EHP)
+Blue Cross Blue Shield Federal Employee Program
+Standard Option
+Basic Option
+Cigna-HealthSpring
+HealthSpring High Deductible Plan F
+HealthSpring Surround
+HealthSpring Preferred (HMO)
+HealthSpring True Choice Plus (PPO)
+Fundamental Medicare (HMO)
+HealthSpring Achieve (HMO C-SNP)
+HealthSpring True Choice (PPO)
+HealthSpring Alliance (HMO)
+HealthSpring Plan A
+HealthSpring Plan F
+HealthSpring True Choice Savings (PPO)
+HealthSpring Preferred Savings (HMO)
+HealthSpring Plan G
+HealthSpring True Choice Core (PPO)
+HealthSpring Premier (HMO-POS)
+HealthSpring Plan N
+EmblemHealth
+DC37 Med-Team (PPO)
+CBP Network (PPO)
+Tri-State Network (PPO)
+Consumer Direct PPO
+GHI (PPO)
+New York City Employees Plan (PPO)
+Network Access
+National Network (PPO)
+EmblemHealth (formerly known as GHI)
+GHI EPO
+National PPO Network
+EmblemHealth Group Access Rx (PPO)
+Tri-State PPO Network
+New York City Employees PPO Plan
+CBP PPO Network
+GHI PPO
+DC37 Med-Team
+GHI HMO
+Highmark Blue Cross Blue Shield
+Blue Card PPO National
+(PPO) Blue
+Simply Blue PPO
+Traditional (PPO)
+Choice Blue PPO
+Shared Cost (PPO)
+Shared Cost Blue PPO
+Affordablue (PPO)
+My Blue Access Standard (PPO)
+Community Blue PPO
+Blue Card (PPO)
+PPO Blue HDHP
+PPO Blue
+BlueCare Custom (PPO)
+BlueCare PPO
+Performance Blue PPO
+Community Blue (PPO)
+PPO HSA
+UnitedHealthcare Oxford
+Oxford Plan
+Freedom (EPO)
+Liberty Network Select EPO HSA
+Freedom EPO
+HealthFirst (NY)
+HealthFirst Life Improvement Plan
+Gold Leaf Premier
+HealthFirst: Essential Plan 4
+Leaf (HMO)
+Essential (HMO)
+HealthFirst CompleteCare (MedicaidManagedCare HMO)
+Healthy New York (HMO)
+Leaf Premier Plus (HMO)
+Platinum Leaf Plan
+HealthFirst: Silver Leaf Premier
+HealthFirst Medicaid Managed Care
+HealthFirst Signature (PPO)
+Leaf Premier (HMO)
+HealthFirst Signature (HMO)
+HealthFirst: Essential Plan 3
+HealthFirst: HMO B
+HealthFirst Connection Plan
+HealthFirst: HMO C
+Gold Leaf Premier Plus
+Senior Health Partners Managed Long-Term Care
+HealthFirst: HMO D
+HealthFirst: HMO E
+HealthFirst Increased Benefits Plan
+Healthfirst Healthy NY Small Group
+HealthFirst: HMO C-Vad
+HealthFirst CompleteCare (MedicareAdvantage HMO)
+HealthFirst OffEx (HMO)
+HealthFirst: HMO B-Vad
+Green Leaf
+CareFirst Blue Cross Blue Shield (Health)
+Blue Choice PPO
+Davis Vision Bluevision Plus
+BlueCard PPO
+BCBS Preferred PPO
+CareFirst Blue Value Plus
+Enhanced PPO
+Bluepreferred PPO
+Select Vision
+Davis Vision Bluevision
+Blue Preferred (PPO)
+First Health (Coventry Health Care)
+First Health Network PPO
+Fidelis Care (NY)
+Fidelis Care Child Health Plus
+WellCare Fidelis Assist
+WellCare Fidelis Simple
+WellCare Fidelis Dual Access
+Silver One
+Fidelis Care At Home MLTC
+Fidelis Care Medicaid Managed Care
+WellCare Fidelis Dual Plus
+NY State of Health (Marketplace)
+Fidelis Simple (HMO-POS)
+Fidelis Care At Home
+Bronze
+Healthierlife - New York State (HARP)
+Part C: Advantage MSA plan
+Part C: Advantage PPO plan
+Original Part A and B
+Part C: Advantage Fee-for-Service (PFFS) plan
+Medigap Plan
+Part C: Advantage HMO plan
+Part C: Advantage Special Needs Plan (SNP) plan
+Humana
+choice PPO Medicare Advantage Plan
+Choice
+Community (HMO_POS)
+Gold Plus SNP-DE (HMO)
+choice SNP-DE
+Gold Plus (HMO-POS)
+Choice SNP-DE (PPO)
+Choice PPO
+ChoiceCare Network
+Medicare Advantage Network
+Medicare Employer (PPO)
+Plus
+Gold Plus (HMO)
+Usaa Honor Giveback (PPO)
+Vision Care Plan
+Group Medicare Advantage PPO Plan
+Meritain Health
+Select Open Access
+Aetna Choice POS II
+Choice POS II by Meta
+Aetna National PPO
+Open Choice PPO
+Blue Cross Blue Shield
+National HMO
+BlueCard PPO Basic
+BlueCard Traditional (Indemnity)
+BlueCard PPO
+Federal Employee Program - Standard Option
+Medicare Advantage PPO
+Federal Employee Program - Basic Option
+EmblemHealth (formerly known as HIP)
+HIP HMO Preferred
+HIP Prime POS
+HIP Prime HMO
+HIP Access I
+HIP Classic
+Nippon Life Benefits
+Evolution Value
+Evolution
+VillageCareMax
+VillageCareMAX Medicaid Managed Long-Term Care (MLTC)
+VillageCareMAX Medicare Health Advantage (HMO D-SNP)
+Medicare Total Advantage Plan (HMO D-SNP)
+Centers Plan for Healthy Living
+Centers Plan for Dual Coverage Care (HMO SNP)
+Managed Long Term Care Plan (Medicaid)
+MagnaCare
+Kingston Trust Fund PPO
+Allegiance Life and Health
+Allegiance Life & Health
+ArchCare
+Advantage HMO (SNP)
+Partners Health Plan
+PHP Care Complete FIDA-IDD Plan
+POMCO
+PHCS/Multiplan
+Consolidated Health Plans
+PHCS
+MultiPlan
+First Health Network
+Tufts Health Plan
+PPO/PHCS Network
+American Republic Insurance Company
+PHCS PPO
+First Health
+Memorial Hermann
+Moda Health
+US Health Group
+Private Healthcare Systems (PHCS) (PPO)
+Health Net
+National PPO - First Health

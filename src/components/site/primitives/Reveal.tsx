@@ -8,10 +8,7 @@ interface RevealProps extends HTMLAttributes<HTMLDivElement> {
 
 export function Reveal({ children, delay = 0, y = 24, className, ...rest }: RevealProps) {
   return (
-    <div
-      className={className}
-      {...rest}
-    >
+    <div className={className} {...rest}>
       {children}
     </div>
   );

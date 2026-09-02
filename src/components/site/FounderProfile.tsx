@@ -1,68 +1,105 @@
-import { ArrowRight, GraduationCap, Award, BadgeCheck } from "lucide-react";
-import { Link } from "@tanstack/react-router";
+import { GeoImage } from "./primitives/GeoImage";
+import { ArrowRight, BadgeCheck } from "lucide-react";
+import { Link } from "@/components/AppLink";
 import { Container } from "./primitives/Container";
-import { SectionHeading } from "./primitives/SectionHeading";
-import { Reveal } from "./primitives/Reveal";
+import { PremiumIcon } from "./primitives/IconBadge";
 import { IMG } from "@/data/images";
+import { getImageAlt } from "@/data/image-seo";
+import type { LucideIconKey } from "@/components/icons/icon-keys";
 
-const creds = [
-  { icon: GraduationCap, label: "Columbia / NewYork-Presbyterian" },
-  { icon: BadgeCheck, label: "Board-certified, Internal Medicine" },
-  { icon: Award, label: "Fellowship, Interventional Pain" },
+const credentials: {
+  iconKey: LucideIconKey;
+  title: string;
+  subtitle: string;
+}[] = [
+  {
+    iconKey: "graduation-cap",
+    title: "Medical Education",
+    subtitle: "Odessa National Medical University",
+  },
+  {
+    iconKey: "hospital",
+    title: "Residency",
+    subtitle: "Columbia University Irving Medical Center",
+  },
+  {
+    iconKey: "medal",
+    title: "Fellowship",
+    subtitle: "Weill Cornell Medicine • Pain Medicine",
+  },
+  {
+    iconKey: "badge-check",
+    title: "Board Certified",
+    subtitle: "American Board of Family Medicine",
+  },
 ];
 
 export function FounderProfile() {
   return (
-    <section id="founder" aria-labelledby="founder-heading" className="py-24 sm:py-32">
+    <section id="founder" aria-labelledby="founder-heading" className="section-py bg-secondary/30">
       <Container size="lg">
-        <div className="grid items-center gap-12 md:grid-cols-[minmax(0,0.9fr)_1.1fr] md:gap-16">
-          <Reveal>
-            <div className="relative mx-auto aspect-square w-full max-w-sm">
-              <div className="absolute inset-0 -z-10 rounded-full bg-[color:var(--mint)] blur-3xl opacity-60" />
-              <img
-                src={IMG.founder}
-                alt="Dr. Anjali Rao, founding physician at Umbrella Health"
-                className="h-full w-full rounded-full object-cover shadow-[var(--shadow-elegant)]"
-                loading="lazy"
-              />
-              <div className="absolute bottom-2 left-2 rounded-full bg-primary px-4 py-2 text-xs font-medium text-primary-foreground shadow-lg">
-                Meet Dr. Rao
+        <div className="grid items-stretch gap-10 md:grid-cols-[minmax(0,1fr)_1.05fr] md:gap-12 lg:gap-14">
+          <div className="relative flex items-center justify-center md:justify-start">
+            <div className="relative aspect-square w-full max-w-[20rem] sm:max-w-[24rem] md:max-w-[28rem] lg:max-w-[32rem]">
+              <div className="relative h-full w-full overflow-hidden rounded-full border border-border/40 shadow-[var(--shadow-card)]">
+                <GeoImage
+                  src={IMG.premiumDoctorPortrait}
+                  alt={getImageAlt("founder")}
+                  fill
+                  className="object-cover object-top"
+                  sizes="(max-width: 768px) 80vw, (max-width: 1024px) 448px, 512px"
+                />
+              </div>
+
+              <div className="absolute bottom-6 left-0 max-w-[13.5rem] rounded-xl bg-primary px-4 py-3 text-primary-foreground shadow-md sm:bottom-8">
+                <p className="flex items-center gap-2 text-sm font-semibold">
+                  Dr. Rajat Lamington
+                  <BadgeCheck className="h-4 w-4 shrink-0 text-primary-foreground/90" />
+                </p>
+                <p className="mt-0.5 text-xs text-primary-foreground/75">Founding physician</p>
               </div>
             </div>
-          </Reveal>
+          </div>
 
-          <Reveal delay={0.1}>
-            <SectionHeading
-              as="h2"
-              eyebrow="Our founding physician"
-              title="Pedigreed care that"
-              accent="treats you like a person."
-            />
-            <p className="mt-6 max-w-xl text-pretty text-base leading-relaxed text-muted-foreground sm:text-lg">
-              Dr. Anjali Rao trained at Columbia and led a multispecialty
-              practice at NewYork-Presbyterian before founding Umbrella to
-              build the clinic she wished existed — rigorous, calm, and
-              built around the patient.
+          <div className="max-w-xl">
+            <p className="mb-4 text-xs font-semibold uppercase tracking-[0.22em] text-primary/70">
+              Founding Physicians
             </p>
-            <ul className="mt-8 space-y-3">
-              {creds.map((c) => (
-                <li key={c.label} className="flex items-center gap-3 text-sm text-foreground/80">
-                  <c.icon className="h-4 w-4 text-primary" />
-                  {c.label}
+            <h2
+              id="founder-heading"
+              className="font-display text-balance text-4xl font-semibold leading-[1.05] tracking-[-0.02em] text-foreground sm:text-5xl"
+            >
+              Physician-led care that <span className="text-primary">puts you first.</span>
+            </h2>
+            <p className="mt-6 text-pretty text-base leading-relaxed text-muted-foreground sm:text-lg">
+              Dr. Rajat Lamington founded Umbrella Health to create a more connected model of
+              healthcare, one where primary care, specialty medicine, and diagnostics work together
+              to deliver better outcomes.
+            </p>
+
+            <ul className="mt-10 space-y-5">
+              {credentials.map((item) => (
+                <li key={item.title} className="flex items-start gap-4">
+                  <PremiumIcon iconKey={item.iconKey} size="sm" className="mt-0.5" />
+                  <div>
+                    <p className="text-sm font-semibold text-foreground">{item.title}</p>
+                    <p className="mt-0.5 text-sm leading-relaxed text-muted-foreground">
+                      {item.subtitle}
+                    </p>
+                  </div>
                 </li>
               ))}
             </ul>
+
             <Link
-              to="/our-physicians"
-              className="group mt-8 inline-flex items-center gap-2 text-sm font-medium text-primary"
+              to="/our-physicians/dr-rajat-lamington"
+              className="group mt-8 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-foreground transition-colors hover:text-primary"
             >
-              Meet the whole team
-              <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+              Meet The Whole Team
+              <ArrowRight className="h-4 w-4" />
             </Link>
-            <div className="mt-8 font-display text-3xl italic text-foreground/80">
-              Anjali Rao, MD
-            </div>
-          </Reveal>
+            <div className="mt-10 h-px w-full max-w-md bg-border/80" aria-hidden />
+          </div>
         </div>
       </Container>
     </section>

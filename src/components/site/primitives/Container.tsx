@@ -14,9 +14,6 @@ const sizeClass = {
 
 export function Container({ size = "xl", className, ...rest }: ContainerProps) {
   return (
-    <div
-      className={cn("mx-auto w-full px-5 sm:px-8", sizeClass[size], className)}
-      {...rest}
-    />
+    <div className={cn("mx-auto w-full px-5 sm:px-8", sizeClass[size], className)} {...rest} />
   );
 }

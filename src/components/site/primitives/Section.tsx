@@ -30,12 +30,7 @@ export const Section = forwardRef<HTMLElement, SectionProps>(function Section(
   return (
     <section
       ref={ref}
-      className={cn(
-        toneClass[tone],
-        spacingClass[spacing],
-        curved && "relative",
-        className,
-      )}
+      className={cn(toneClass[tone], spacingClass[spacing], curved && "relative", className)}
       {...rest}
     >
       {children}
@@ -44,10 +39,8 @@ export const Section = forwardRef<HTMLElement, SectionProps>(function Section(
           aria-hidden="true"
           className="absolute inset-x-0 bottom-[-1px] h-12 bg-background"
           style={{
-            WebkitMaskImage:
-              "radial-gradient(120% 100% at 50% 100%, black 70%, transparent 71%)",
-            maskImage:
-              "radial-gradient(120% 100% at 50% 100%, black 70%, transparent 71%)",
+            WebkitMaskImage: "radial-gradient(120% 100% at 50% 100%, black 70%, transparent 71%)",
+            maskImage: "radial-gradient(120% 100% at 50% 100%, black 70%, transparent 71%)",
           }}
         />
       )}

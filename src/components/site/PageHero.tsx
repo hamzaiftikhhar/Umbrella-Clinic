@@ -1,8 +1,9 @@
 import type { ReactNode } from "react";
 import { Container } from "./primitives/Container";
 import { Reveal } from "./primitives/Reveal";
-import { Link } from "@tanstack/react-router";
+import { Link } from "@/components/AppLink";
 import { ChevronRight } from "lucide-react";
+import { geoImgProps } from "./primitives/GeoImage";
 
 export interface Crumb {
   label: string;
@@ -39,29 +40,27 @@ export function PageHero({
         : "bg-background text-foreground";
 
   return (
-    <section
-      className={`relative overflow-hidden pt-28 pb-24 sm:pt-36 sm:pb-32 ${bg}`}
-    >
+    <section className={`relative overflow-hidden pt-24 pb-24 sm:pt-28 sm:pb-32 ${bg}`}>
       <Container>
         {crumbs && crumbs.length > 0 && (
           <nav
             aria-label="Breadcrumb"
-            className={`mb-6 flex items-center gap-1.5 text-xs ${
-              dark ? "text-primary-foreground/60" : "text-foreground/55"
-            }`}
+            className={`mb-6 text-xs ${dark ? "text-primary-foreground/60" : "text-foreground/55"}`}
           >
-            {crumbs.map((c, i) => (
-              <span key={i} className="flex items-center gap-1.5">
-                {i > 0 && <ChevronRight className="h-3 w-3" />}
-                {c.to ? (
-                  <Link to={c.to} className="hover:underline">
-                    {c.label}
-                  </Link>
-                ) : (
-                  <span>{c.label}</span>
-                )}
-              </span>
-            ))}
+            <ol className="flex flex-wrap items-center gap-1.5">
+              {crumbs.map((c, i) => (
+                <li key={i} className="flex items-center gap-1.5">
+                  {i > 0 && <ChevronRight className="h-3 w-3 shrink-0" aria-hidden="true" />}
+                  {c.to ? (
+                    <Link href={c.to} className="hover:underline">
+                      {c.label}
+                    </Link>
+                  ) : (
+                    <span aria-current="page">{c.label}</span>
+                  )}
+                </li>
+              ))}
+            </ol>
           </nav>
         )}
         <div className="grid items-center gap-12 md:grid-cols-[1.1fr_0.9fr] md:gap-16">
@@ -75,10 +74,10 @@ export function PageHero({
                 {eyebrow}
               </p>
             )}
-            <h1 className="text-balance text-4xl font-semibold leading-[1.05] tracking-tight sm:text-5xl md:text-[3.25rem]">
+            <h1 className="font-display text-balance text-4xl font-bold leading-[1.04] tracking-[-0.02em] sm:text-5xl md:text-[3.25rem]">
               {italic ? (
                 <>
-                  <span className="font-display italic font-medium">{italic} </span>
+                  <span className="font-medium">{italic} </span>
                   {title}
                 </>
               ) : (
@@ -101,8 +100,9 @@ export function PageHero({
               <img
                 src={image}
                 alt={imageAlt}
-                className="h-full w-full rounded-full object-cover shadow-[var(--shadow-elegant)]"
+                className="h-full w-full rounded-full object-cover object-top shadow-[var(--shadow-elegant)]"
                 loading="eager"
+                {...geoImgProps(imageAlt)}
               />
             </div>
           </Reveal>
@@ -113,10 +113,8 @@ export function PageHero({
         aria-hidden="true"
         className="absolute inset-x-0 bottom-[-1px] h-16 bg-background"
         style={{
-          WebkitMaskImage:
-            "radial-gradient(140% 100% at 50% 100%, black 70%, transparent 71%)",
-          maskImage:
-            "radial-gradient(140% 100% at 50% 100%, black 70%, transparent 71%)",
+          WebkitMaskImage: "radial-gradient(140% 100% at 50% 100%, black 70%, transparent 71%)",
+          maskImage: "radial-gradient(140% 100% at 50% 100%, black 70%, transparent 71%)",
         }}
       />
     </section>

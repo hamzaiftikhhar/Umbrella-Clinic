@@ -1,5 +1,5 @@
 import { ArrowRight } from "lucide-react";
-import { Link } from "@tanstack/react-router";
+import { Link } from "@/components/AppLink";
 import { cn } from "@/lib/utils";
 
 interface ServiceCardProps {
@@ -15,7 +15,7 @@ export function ServiceCard({ title, description, to, badge, image, className }:
   const Inner = (
     <div
       className={cn(
-        "group relative flex h-full flex-col justify-between overflow-hidden rounded-3xl border border-border/60 bg-secondary/50 p-5 transition-all duration-300 hover:-translate-y-0.5 hover:bg-secondary hover:shadow-[var(--shadow-card)]",
+        "group relative flex h-full flex-col justify-between overflow-hidden rounded-[1.375rem] border border-border/50 bg-card p-6 shadow-[var(--shadow-card)] transition-all duration-300 hover:-translate-y-1 hover:border-primary/25 hover:shadow-[var(--shadow-elegant)]",
         className,
       )}
     >

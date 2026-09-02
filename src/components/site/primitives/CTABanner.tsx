@@ -1,48 +1,71 @@
 import { Container } from "./Container";
-import { Reveal } from "./Reveal";
 import { BookButton } from "./BookButton";
-import { IMG } from "@/data/images";
 
-interface CTABannerProps {
+export interface CTABannerProps {
+  eyebrow?: string;
   title?: string;
   italic?: string;
-  image?: string;
-  imageAlt?: string;
   ctaLabel?: string;
+  ariaLabel?: string;
+  /** @deprecated retained for API compatibility; clinic photo carousel removed */
+  images?: readonly string[];
+  /** @deprecated retained for API compatibility; clinic photo carousel removed */
+  imageAlt?: string;
 }
 
+/**
+ * Page-closing call-to-action. Art-directed precision panel (tokenized navy +
+ * data-grid motif)  replaces the repeated clinic-photo carousel.
+ */
 export function CTABanner({
+  eyebrow,
   title = "Take the first step to",
   italic = "feel measurably better.",
-  image = IMG.patientDog,
-  imageAlt = "Patient smiling outdoors",
   ctaLabel = "Book your appointment",
+  ariaLabel = "Get started",
 }: CTABannerProps) {
   return (
-    <section aria-label="Get started" className="px-5 pb-24 sm:px-8 sm:pb-32">
+    <section aria-label={ariaLabel} className="px-5 pb-24 sm:px-8 sm:pb-32">
       <Container>
-        <Reveal>
-          <div className="relative overflow-hidden rounded-[28px] sm:rounded-[36px]">
-            <img
-              src={image}
-              alt={imageAlt}
-              className="h-[360px] w-full object-cover sm:h-[420px]"
-              loading="lazy"
-            />
-            <div className="absolute inset-0 bg-gradient-to-r from-foreground/55 via-foreground/20 to-transparent" />
-            <div className="absolute inset-0 flex items-center p-8 sm:p-14">
-              <div className="max-w-md text-primary-foreground">
-                <h2 className="text-balance text-3xl font-semibold sm:text-4xl">
-                  {title}{" "}
-                  <span className="font-display italic font-medium">{italic}</span>
-                </h2>
-                <div className="mt-6">
-                  <BookButton variant="light">{ctaLabel}</BookButton>
-                </div>
-              </div>
+        <div className="relative isolate overflow-hidden rounded-[1.5rem] bg-primary px-8 py-16 text-primary-foreground shadow-[var(--shadow-elegant)] sm:px-14 sm:py-20">
+          {/* Precision data grid */}
+          <svg
+            className="pointer-events-none absolute inset-0 h-full w-full text-primary-foreground/[0.06]"
+            aria-hidden
+          >
+            <defs>
+              <pattern id="cta-grid" width="48" height="48" patternUnits="userSpaceOnUse">
+                <path d="M48 0H0V48" fill="none" stroke="currentColor" strokeWidth="1" />
+              </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#cta-grid)" />
+          </svg>
+
+          {/* Accent glows */}
+          <div
+            className="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full bg-accent-teal/20 blur-3xl"
+            aria-hidden
+          />
+          <div
+            className="pointer-events-none absolute -bottom-32 left-1/3 h-72 w-72 rounded-full bg-accent-emerald/15 blur-3xl"
+            aria-hidden
+          />
+
+          <div className="relative max-w-2xl">
+            {eyebrow && (
+              <p className="mb-4 inline-flex items-center gap-2 text-xs font-medium uppercase tracking-[0.22em] text-primary-foreground/70">
+                <span className="h-1.5 w-1.5 rounded-full bg-accent-emerald" aria-hidden />
+                {eyebrow}
+              </p>
+            )}
+            <h2 className="font-display text-balance text-3xl font-semibold leading-[1.05] tracking-[-0.02em] sm:text-4xl md:text-5xl">
+              {title} <span className="text-primary-foreground/90">{italic}</span>
+            </h2>
+            <div className="mt-8">
+              <BookButton variant="light">{ctaLabel}</BookButton>
             </div>
           </div>
-        </Reveal>
+        </div>
       </Container>
     </section>
   );

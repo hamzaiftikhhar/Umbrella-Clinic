@@ -1,0 +1,427 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@source "../app";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+
+  /* One sans family across the site (Haffer / DM Sans). */
+  --font-primary: "Haffer", "Haffer SQ", var(--font-haffer-fallback), Arial, sans-serif;
+  --font-secondary: var(--font-primary);
+  --font-editorial: var(--font-primary);
+  --font-sans: var(--font-primary);
+  --font-display: var(--font-primary);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary-glow: var(--primary-glow);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-cream: var(--cream);
+  --color-sage: var(--sage);
+  --color-mist: var(--mist);
+  --color-mint: var(--mint);
+
+  /* Warm surface ramp */
+  --color-surface-raised: var(--surface-raised);
+  --color-surface-warm: var(--surface-warm);
+
+  /* Navy scale */
+  --color-navy-900: var(--navy-900);
+  --color-navy-800: var(--navy-800);
+  --color-navy-700: var(--navy-700);
+  --color-navy-600: var(--navy-600);
+
+  /* Success — Nectar green */
+  --color-success: var(--success);
+  --color-success-foreground: var(--success-foreground);
+  --color-success-surface: var(--success-surface);
+
+  /* Precision data accents */
+  --color-accent-emerald: var(--accent-emerald);
+  --color-accent-emerald-foreground: var(--accent-emerald-foreground);
+  --color-accent-emerald-surface: var(--accent-emerald-surface);
+  --color-accent-teal: var(--accent-teal);
+  --color-accent-teal-foreground: var(--accent-teal-foreground);
+  --color-accent-teal-surface: var(--accent-teal-surface);
+  --color-accent-amber: var(--accent-amber);
+  --color-accent-amber-foreground: var(--accent-amber-foreground);
+  --color-accent-amber-surface: var(--accent-amber-surface);
+  --color-rating-star: var(--rating-star);
+
+  /* Premium icon tiles */
+  --color-icon-premium-surface: var(--icon-premium-surface);
+  --color-icon-premium: var(--icon-premium-color);
+
+  --color-ring-offset-background: var(--background);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+:root {
+  --radius: 1.25rem;
+
+  /* Premium easing for micro-interactions */
+  --ease-premium: cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Premium duotone icon tiles — primary-blue glyphs on a soft blue tile */
+  --icon-premium-surface: #e7f0fe;
+  --icon-premium-color: #2563eb;
+  --icon-premium-shadow: 0 8px 30px rgba(24, 58, 105, 0.08);
+
+  /* Navy — used as an accent, not the dominant UI color */
+  --navy-900: #0f2748;
+  --navy-800: #183a69;
+  --navy-700: #1e4a85;
+  --navy-600: #2a5c9e;
+
+  /* Cool premium canvas */
+  --background: #f8fbff;
+  --foreground: #0c1a2e;
+
+  --card: #ffffff;
+  --card-foreground: #0c1a2e;
+  --popover: #ffffff;
+  --popover-foreground: #0c1a2e;
+
+  /* Surface ramp */
+  --surface-raised: #ffffff;
+  --surface-warm: #eef4ff;
+
+  /* Primary — bright clinical blue */
+  --primary: #3b82f6;
+  --primary-foreground: #ffffff;
+  --primary-glow: #2563eb;
+
+  --secondary: #eaf2fe;
+  --secondary-foreground: var(--navy-800);
+
+  --muted: #eef3fb;
+  --muted-foreground: #566276;
+
+  --accent: #dbeafe;
+  --accent-foreground: var(--navy-800);
+
+  --destructive: #b42318;
+  --destructive-foreground: #fffaf8;
+
+  /* Success — Nectar green */
+  --success: #22c55e;
+  --success-foreground: #ffffff;
+  --success-surface: #e8f8ee;
+
+  /* Precision data-visualization accents (used sparingly to encode metrics) */
+  --accent-emerald: #1f7a5a;
+  --accent-emerald-foreground: #f4fbf8;
+  --accent-emerald-surface: #e7f2ed;
+  --accent-teal: #0f6e74;
+  --accent-teal-foreground: #f2fbfb;
+  --accent-teal-surface: #e4f1f1;
+  --accent-amber: #b67324;
+  --accent-amber-foreground: #fef8f0;
+  --accent-amber-surface: #f6ecdc;
+  --rating-star: #e0a73a;
+
+  --border: #e2e8f2;
+  --input: #e2e8f2;
+  --ring: var(--primary);
+
+  --cream: #eef4ff;
+  --sage: #dbe8fb;
+  --mist: #eef3fb;
+  --mint: #e7f0fe;
+
+  /* Multi-hue precision palette for diagnostic data viz */
+  --chart-1: var(--navy-700);
+  --chart-2: #1f7a5a;
+  --chart-3: #0f6e74;
+  --chart-4: #b67324;
+  --chart-5: #8fb4dc;
+
+  --sidebar: #f5f3ef;
+  --sidebar-foreground: #0c1422;
+  --sidebar-primary: var(--navy-800);
+  --sidebar-primary-foreground: #f7f9fc;
+  --sidebar-accent: #eef2f7;
+  --sidebar-accent-foreground: var(--navy-800);
+  --sidebar-border: #e8e2d8;
+  --sidebar-ring: var(--navy-600);
+
+  --shadow-elegant: 0 20px 48px -28px rgba(24, 58, 105, 0.18);
+  --shadow-soft: 0 8px 24px -16px rgba(24, 58, 105, 0.12);
+  --shadow-card: 0 1px 2px rgba(24, 58, 105, 0.04), 0 12px 28px -18px rgba(24, 58, 105, 0.1);
+  --gradient-card-overlay: linear-gradient(180deg, transparent 35%, rgba(18, 43, 78, 0.78) 100%);
+  --gradient-hero: radial-gradient(
+    60% 80% at 50% 0%,
+    color-mix(in oklab, var(--sage) 55%, transparent),
+    transparent 70%
+  );
+  --gradient-mint: linear-gradient(180deg, var(--mint) 0%, var(--cream) 100%);
+  --gradient-forest: linear-gradient(160deg, var(--primary) 0%, var(--navy-900) 100%);
+}
+
+.dark {
+  --background: oklch(0.18 0.02 254);
+  --foreground: oklch(0.97 0.008 254);
+  --card: oklch(0.22 0.02 254);
+  --card-foreground: oklch(0.97 0.008 254);
+  --popover: oklch(0.22 0.02 254);
+  --popover-foreground: oklch(0.97 0.008 254);
+  --primary: oklch(0.7 0.08 254);
+  --primary-foreground: oklch(0.18 0.02 254);
+  --primary-glow: oklch(0.8 0.08 254);
+  --secondary: oklch(0.28 0.03 254);
+  --secondary-foreground: oklch(0.97 0.008 254);
+  --muted: oklch(0.28 0.03 254);
+  --muted-foreground: oklch(0.7 0.02 254);
+  --accent: oklch(0.32 0.04 254);
+  --accent-foreground: oklch(0.97 0.008 254);
+  --border: oklch(1 0 0 / 12%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.6 0.05 254);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+  html {
+    scroll-behavior: smooth;
+    overflow-x: clip;
+    background-color: var(--color-background);
+  }
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    font-weight: 400;
+    font-feature-settings: "ss01", "cv11";
+    -webkit-font-smoothing: antialiased;
+    overflow-x: clip;
+    min-height: 100%;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-primary);
+    letter-spacing: -0.02em;
+  }
+  h1 {
+    font-weight: 500;
+  }
+  h2 {
+    font-weight: 500;
+  }
+  h3,
+  h4 {
+    font-weight: 600;
+  }
+  button,
+  [type="submit"] {
+    font-weight: 600;
+  }
+}
+
+@utility font-display {
+  font-family: var(--font-primary);
+  font-optical-sizing: auto;
+}
+
+@utility font-primary {
+  font-family: var(--font-primary);
+}
+
+@utility font-secondary {
+  font-family: var(--font-primary);
+  font-optical-sizing: auto;
+}
+
+@utility curved-bottom {
+  -webkit-mask-image: radial-gradient(120% 90% at 50% 0%, black 70%, transparent 71%);
+  mask-image: radial-gradient(120% 90% at 50% 0%, black 70%, transparent 71%);
+}
+
+@utility text-balance {
+  text-wrap: balance;
+}
+
+@utility transition-premium {
+  transition-timing-function: var(--ease-premium);
+  transition-duration: 300ms;
+}
+
+/* Homepage section rhythm — generous white space between sections */
+@utility section-py {
+  @apply py-14 sm:py-20;
+}
+
+@utility section-py-compact {
+  @apply py-8 sm:py-12;
+}
+
+/* Soft card surface — 20–24px radius + soft shadow */
+@utility card-surface {
+  border-radius: 1.375rem; /* 22px */
+  background-color: var(--card);
+  box-shadow: var(--shadow-card);
+}
+
+@keyframes reviews-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.reviews-marquee-track {
+  animation: reviews-marquee 90s linear infinite;
+}
+
+.reviews-marquee:hover .reviews-marquee-track {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reviews-marquee {
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .reviews-marquee::-webkit-scrollbar {
+    display: none;
+  }
+
+  .reviews-marquee-track {
+    animation: none;
+  }
+}
+
+/* How It Works — solar system orbit */
+.orbit-system {
+  --orbit-scale: 1;
+}
+
+.orbit-system--split {
+  --orbit-scale: 0.88;
+}
+
+.orbit-label {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  min-height: 2.1rem;
+  max-height: 2.1rem;
+}
+
+@media (max-width: 1023px) {
+  .orbit-system--split {
+    --orbit-scale: 0.68;
+  }
+}
+
+@media (max-width: 767px) {
+  .orbit-system {
+    --orbit-scale: 0.52;
+  }
+
+  .orbit-system--split {
+    --orbit-scale: 0.54;
+  }
+
+  .orbit-label {
+    min-height: 1.9rem;
+    max-height: 1.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .orbit-system {
+    --orbit-scale: 0.42;
+  }
+
+  .orbit-system--split {
+    --orbit-scale: 0.46;
+  }
+}
+
+@keyframes smooth-orbit {
+  0% {
+    transform: rotate(var(--angle)) translateY(calc(var(--radius) * var(--orbit-scale) * -1))
+      rotate(calc(var(--angle) * -1));
+  }
+  100% {
+    transform: rotate(calc(var(--angle) + 360deg))
+      translateY(calc(var(--radius) * var(--orbit-scale) * -1))
+      rotate(calc((var(--angle) + 360deg) * -1));
+  }
+}
+
+.orbit-item {
+  animation: smooth-orbit var(--speed) linear infinite;
+  animation-play-state: paused;
+}
+
+.orbit-system:hover .orbit-item,
+.orbit-system:focus-within .orbit-item {
+  animation-play-state: running;
+}
+
+.orbit-sphere {
+  box-shadow:
+    0 14px 32px -10px color-mix(in oklab, var(--primary) 40%, transparent),
+    inset 0 -10px 18px rgba(0, 0, 0, 0.22);
+}
+
+.orbit-item:hover .orbit-sphere,
+.orbit-item:focus-within .orbit-sphere {
+  box-shadow:
+    0 22px 44px -12px color-mix(in oklab, var(--primary) 50%, transparent),
+    inset 0 -10px 18px rgba(0, 0, 0, 0.18);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .orbit-item {
+    animation-play-state: paused;
+  }
+}
+
+/* premium foundation */
